@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div className={'w-full py-4 px-3 flex justify-center border-b'}>
             <div className={'container flex items-center justify-between'}>
-                <span className={'md:font-black md:text-lg'}>CHALLENGE</span>
+                <h1 className={'md:font-black md:text-lg'}>CHALLENGE</h1>
                 <Searchbar/>
             </div>
         </div>

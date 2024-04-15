@@ -27,7 +27,7 @@ const Searchbar = () => {
         setSearchResult(data?.products);
     }
     return (
-        <div className={'relative'}>
+        <div data-testid='loading-spinner' className={'relative'}>
             <div
                 className={cn('flex items-center px-1.5 py-1 border rounded-lg', isFocused && 'rounded-b-none border-b-0')}>
                 <input onChange={(e) => e.target.value.trim().length > 1 && debouncedSearch(e.target.value)}
@@ -35,7 +35,7 @@ const Searchbar = () => {
                        onBlur={() => setIsFocused(false)}/>
                 <SearchIcon/>
             </div>
-            {isFocused && <div
+            {isFocused && <div data-testid="dropdown-element"
                 className={'absolute w-80 min-h-10 max-h-40 overflow-y-scroll border right-0 top-full bg-white shadow-xl flex flex-col divide-solid divide-y '}>
                 {!loading ? searchResult?.map((product, index) => <ProductSearchItem key={index} product={product}/>) :
                     <LoadingSpinner className={'min-h-[100px]'}/>}
