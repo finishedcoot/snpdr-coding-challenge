@@ -28,18 +28,21 @@
     100%  {transform:scaleY(-1) rotate(-135deg)}
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*Scrollbar style*/
+::-webkit-scrollbar {
+    width: 7px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar-track {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #101010;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
