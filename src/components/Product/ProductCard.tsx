@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({product}) => {
     return (
-        <div className={'flex flex-col p-4 border rounded-2xl gap-2 xl:w-80 w-72'}>
+        <div data-testid='product-card' className={'flex flex-col p-4 border rounded-2xl gap-2 xl:w-80 w-72'}>
             <div className={'relative w-full h-52'}>
                 <Image src={product.thumbnail} alt={product.title} fill={true} className={'object-contain'}/>
             </div>
