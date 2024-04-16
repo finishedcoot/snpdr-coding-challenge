@@ -7,7 +7,7 @@ interface SideBarProps {
 }
 
 const SideBar: FC<SideBarProps> = ({children}) => {
-    const [isOpen, setIsOpen] = useState(!(window.innerWidth<768))
+    const [isOpen, setIsOpen] = useState(!(window?.innerWidth<768))
     const toggleOpen = () => {
         if(window.innerWidth<768){
             if(isOpen){

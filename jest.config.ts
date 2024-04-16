@@ -11,6 +11,7 @@ const customJestConfig = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
+    "@/mock-data/products.jso": "<rootDir>/mock-data/products.json",
     '^@/(.*)$': '<rootDir>/src/$1',
   }
 };

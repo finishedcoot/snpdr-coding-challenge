@@ -27,7 +27,7 @@ const Searchbar = () => {
         setSearchResult(data?.products);
     }
     return (
-        <div data-testid='loading-spinner' className={'relative'}>
+        <div className={'relative'}>
             <div
                 className={cn('flex items-center px-1.5 py-1 border rounded-lg', isFocused && 'rounded-b-none border-b-0')}>
                 <input onChange={(e) => e.target.value.trim().length > 1 && debouncedSearch(e.target.value)}

@@ -1,5 +1,5 @@
-export const products ={
-    "products": [
+
+{  "products": [
         {
             "id": 1,
             "title": "iPhone 9",
